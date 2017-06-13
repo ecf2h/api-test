@@ -6,9 +6,9 @@ const {
 } = Ember;
 
 export default Route.extend({
-  model() {
-    // want to return all the posts from the API and render them - use store
-    return this.store.findAll('post');
+  // get all posts for particular user
+  model(params) {
+    return this.store.query('post', { userId: params.id } );
   },
 
   setupController(controller, model) {

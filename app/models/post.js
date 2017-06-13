@@ -8,7 +8,7 @@ const {
 
 export default DS.Model.extend({
   // id is a default
-  userID: belongsTo('user'),
+  userId: belongsTo('user'),
   // ember will call the user when the post is called
   title: attr('string'),
   body: attr('string')
